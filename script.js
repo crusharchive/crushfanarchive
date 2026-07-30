@@ -124,3 +124,37 @@ if(homeGalleryItems.length > 0 && homePrev && homeNext){
     showHomeGallery();
 
 }
+
+// VIDEO LIGHTBOX
+
+const videos = document.querySelectorAll(".member-slider video");
+
+const lightbox = document.getElementById("videoLightbox");
+const lightboxVideo = document.getElementById("lightboxVideo");
+const closeVideo = document.querySelector(".video-close");
+
+
+videos.forEach(video => {
+
+    video.addEventListener("click",()=>{
+
+        lightboxVideo.src = video.src;
+
+        lightbox.classList.add("active");
+
+        lightboxVideo.play();
+
+    });
+
+});
+
+
+closeVideo.addEventListener("click",()=>{
+
+    lightbox.classList.remove("active");
+
+    lightboxVideo.pause();
+
+    lightboxVideo.src="";
+
+});
