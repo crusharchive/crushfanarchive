@@ -46,16 +46,14 @@ nav{
 }
 
 .logo{
-    font-size:24px;
-    font-weight:bold;
-    letter-spacing:6px;
+    display:flex;
+    align-items:center;
 }
 
 .logo img{
     height:60px;
     width:auto;
     display:block;
-    transform:translateY(2px);
 }
 
 .nav-links{
@@ -65,18 +63,92 @@ nav{
     list-style:none;
 }
 
-
 .nav-links a{
     color:white;
     text-decoration:none;
-    font-size:20px;   /* Büyüt */
-    font-weight:600;  /* Biraz kalınlaştır */
+    font-size:20px;
+    font-weight:600;
     transition:.3s;
+    white-space:nowrap;
 }
-
 
 .nav-links a:hover{
     color:#9d9d9d;
+}
+
+.menu-toggle{
+    display:none;
+    font-size:34px;
+    color:white;
+    cursor:pointer;
+    user-select:none;
+}
+
+/* ========================= */
+/* MOBİL */
+/* ========================= */
+
+@media (max-width:768px){
+
+    nav{
+        height:70px;
+        padding:0 18px;
+    }
+
+    .logo img{
+        height:42px;
+    }
+
+    .menu-toggle{
+        display:block;
+        z-index:1001;
+    }
+
+    .nav-links{
+        position:fixed;
+        top:70px;
+        left:-100%;
+        width:100%;
+        height:calc(100vh - 70px);
+
+        background:#080808;
+
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        align-items:center;
+
+        gap:25px;
+
+        padding-top:40px;
+
+        transition:left .35s ease;
+    }
+
+    .nav-links.active{
+        left:0;
+    }
+
+    .nav-links a{
+        font-size:22px;
+    }
+
+    .dropdown{
+        width:100%;
+        text-align:center;
+    }
+
+    .dropdown-menu{
+        position:static;
+        display:none;
+        background:#111;
+        width:100%;
+        border-radius:0;
+    }
+
+    .dropdown:hover .dropdown-menu{
+        display:block;
+    }
 }
 
 /* CRUSH COUNTDOWN */
@@ -680,6 +752,7 @@ nav{
 }
 
 
+
 .home-gallery-box img{
 
     width:100%;
@@ -795,5 +868,93 @@ nav{
 .home-gallery-next:hover{
 
     transform:scale(1.1);
+
+}
+
+/* ========================= */
+/* MOBILE MENU */
+/* ========================= */
+
+@media (max-width:768px){
+
+    nav{
+
+        padding:0 18px;
+
+    }
+
+    .logo img{
+
+        height:42px;
+
+    }
+
+    .menu-toggle{
+
+        display:block;
+
+    }
+
+    .nav-links{
+
+        position:fixed;
+
+        top:70px;
+
+        left:-100%;
+
+        width:100%;
+
+        background:#080808;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:25px;
+
+        padding:35px 0;
+
+        transition:.35s;
+
+        z-index:999;
+
+    }
+
+    .nav-links.active{
+
+        left:0;
+
+    }
+
+    .nav-links a{
+
+        font-size:22px;
+
+    }
+
+    .dropdown-menu{
+
+        position:static;
+
+        display:none;
+
+        background:#111;
+
+        width:100%;
+
+        text-align:center;
+
+        border-radius:0;
+
+    }
+
+    .dropdown:hover .dropdown-menu{
+
+        display:block;
+
+    }
 
 }

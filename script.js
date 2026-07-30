@@ -144,3 +144,68 @@ if(homeGalleryItems.length > 0 && homePrev && homeNext){
 
 
 }
+
+const menuToggle = document.querySelector(".menu-toggle");
+
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click",()=>{
+
+    navLinks.classList.toggle("active");
+
+});
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        navLinks.classList.remove("active");
+
+    });
+
+});
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+if(menuToggle){
+
+    menuToggle.addEventListener("click",()=>{
+
+        navLinks.classList.toggle("active");
+
+    });
+
+}
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        navLinks.classList.remove("active");
+
+    });
+
+});
+
+// MOBİL DROPDOWN
+
+const dropdown = document.querySelector(".dropdown");
+
+if(dropdown){
+
+    const dropdownLink = dropdown.querySelector("a");
+
+    dropdownLink.addEventListener("click",(e)=>{
+
+        if(window.innerWidth <= 768){
+
+            e.preventDefault();
+
+            dropdown.classList.toggle("open");
+
+        }
+
+    });
+
+}
