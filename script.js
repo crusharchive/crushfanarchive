@@ -1,65 +1,64 @@
-// CRUSH Website JavaScript
 
-// Ana sayfada şu an JavaScript kullanılmıyor.
-// Üye profil sayfalarındaki slider ve diğer özellikler
-// daha sonra buraya eklenecek.
+// ==========================
+// COUNTDOWN
+// ==========================
 
-const targetDate = new Date("July 31, 2026 00:00:00").getTime();
+const targetDate = new Date(2026, 6, 31, 0, 0, 0).getTime();
 
+function updateCountdown(){
 
-setInterval(()=>{
+    const countdown = document.getElementById("countdown");
+    const days = document.getElementById("days");
+    const hours = document.getElementById("hours");
+    const minutes = document.getElementById("minutes");
+    const seconds = document.getElementById("seconds");
 
+    if(!countdown || !days || !hours || !minutes || !seconds){
+        return;
+    }
 
-    const now = new Date().getTime();
-
+    const now = Date.now();
     const distance = targetDate - now;
 
 
     if(distance <= 0){
 
-        document.getElementById("countdown").innerHTML =
-        "<h2>CRUSH! IS HERE</h2>";
-
+        countdown.innerHTML = "<h2>CRUSH IS HERE!</h2>";
         return;
 
     }
 
 
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-    const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24))
-        /(1000 * 60 * 60)
-    );
+    days.textContent = String(
+        Math.floor(distance / (1000 * 60 * 60 * 24))
+    ).padStart(2,"0");
 
 
-    const minutes = Math.floor(
-        (distance % (1000 * 60 * 60))
-        /(1000 * 60)
-    );
+    hours.textContent = String(
+        Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+    ).padStart(2,"0");
 
 
-    const seconds = Math.floor(
-        (distance % (1000 * 60))
-        /1000
-    );
+    minutes.textContent = String(
+        Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+    ).padStart(2,"0");
 
 
+    seconds.textContent = String(
+        Math.floor((distance % (1000 * 60)) / 1000)
+    ).padStart(2,"0");
 
-    document.getElementById("days").innerHTML = days;
+}
 
-    document.getElementById("hours").innerHTML = hours;
 
-    document.getElementById("minutes").innerHTML = minutes;
-
-    document.getElementById("seconds").innerHTML = seconds;
+updateCountdown();
+setInterval(updateCountdown,1000);
 
 
 
-},1000);
-
-/* HOME GALLERY SLIDER */
+// ==========================
+// HOME GALLERY
+// ==========================
 
 const homeGalleryItems = document.querySelectorAll(
     ".home-gallery-item, .home-more-item"
@@ -68,9 +67,7 @@ const homeGalleryItems = document.querySelectorAll(
 const homePrev = document.querySelector(".home-gallery-prev");
 const homeNext = document.querySelector(".home-gallery-next");
 
-
 let homeIndex = 0;
-
 
 
 function showHomeGallery(){
@@ -91,38 +88,12 @@ function showHomeGallery(){
 }
 
 
-
-
-
 if(homeGalleryItems.length > 0 && homePrev && homeNext){
 
 
-    homeNext.addEventListener("click", ()=>{
-
-
-        homeIndex++;
-
-
-        if(homeIndex >= homeGalleryItems.length){
-
-            homeIndex = 0;
-
-        }
-
-
-        showHomeGallery();
-
-
-    });
-
-
-
-
-    homePrev.addEventListener("click", ()=>{
-
+    homePrev.addEventListener("click",()=>{
 
         homeIndex--;
-
 
         if(homeIndex < 0){
 
@@ -130,93 +101,26 @@ if(homeGalleryItems.length > 0 && homePrev && homeNext){
 
         }
 
-
         showHomeGallery();
 
-
     });
 
 
+    homeNext.addEventListener("click",()=>{
 
-    // ilk fotoğrafı göster
+        homeIndex++;
 
-    showHomeGallery();
+        if(homeIndex >= homeGalleryItems.length){
 
-
-}
-
-const menuToggle = document.querySelector(".menu-toggle");
-
-const navLinks = document.querySelector(".nav-links");
-
-menuToggle.addEventListener("click",()=>{
-
-    navLinks.classList.toggle("active");
-
-});
-
-document.querySelectorAll(".nav-links a").forEach(link=>{
-
-    link.addEventListener("click",()=>{
-
-        navLinks.classList.remove("active");
-
-    });
-
-});
-
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-
-if(menuToggle){
-
-    menuToggle.addEventListener("click",()=>{
-
-        navLinks.classList.toggle("active");
-
-    });
-
-}
-
-document.querySelectorAll(".nav-links a").forEach(link=>{
-
-    link.addEventListener("click",()=>{
-
-        navLinks.classList.remove("active");
-
-    });
-
-});
-
-// MOBİL DROPDOWN
-
-const dropdown = document.querySelector(".dropdown");
-
-if(dropdown){
-
-    const dropdownLink = dropdown.querySelector("a");
-
-    dropdownLink.addEventListener("click",(e)=>{
-
-        if(window.innerWidth <= 768){
-
-            e.preventDefault();
-
-            dropdown.classList.toggle("open");
+            homeIndex = 0;
 
         }
 
+        showHomeGallery();
+
     });
 
-}
 
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-
-if(menuToggle && navLinks){
-
-    menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-    });
+    showHomeGallery();
 
 }
