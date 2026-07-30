@@ -231,18 +231,9 @@ function updatePopupPlayButton() {
 
     if (!popupVideo || !popupPlay) return;
 
-    if (
-        popupVideo.paused ||
-        popupVideo.ended
-    ) {
-
-        popupPlay.style.display = "flex";
-
-    } else {
-
-        popupPlay.style.display = "none";
-
-    }
+    // Tarayıcının kendi play tuşunu kullanacağız.
+    // Bu yüzden özel play butonunu hiç göstermiyoruz.
+    popupPlay.style.display = "none";
 
 }
 

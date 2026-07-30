@@ -125,36 +125,56 @@ if(homeGalleryItems.length > 0 && homePrev && homeNext){
 
 }
 
-// VIDEO LIGHTBOX
+// ==========================
+// PERFORMANCE VIDEO LIGHTBOX
+// ==========================
 
-const videos = document.querySelectorAll(".member-slider video");
+const performanceCards = document.querySelectorAll(".performance-card");
 
 const lightbox = document.getElementById("videoLightbox");
 const lightboxVideo = document.getElementById("lightboxVideo");
 const closeVideo = document.querySelector(".video-close");
 
+if (performanceCards.length && lightbox && lightboxVideo && closeVideo) {
 
-videos.forEach(video => {
+    performanceCards.forEach(card => {
 
-    video.addEventListener("click",()=>{
+        card.addEventListener("click", () => {
 
-        lightboxVideo.src = video.src;
+            const video = card.dataset.video;
 
-        lightbox.classList.add("active");
+            lightboxVideo.src = video;
 
-        lightboxVideo.play();
+            lightbox.classList.add("active");
+
+            lightboxVideo.play();
+
+        });
 
     });
 
-});
+    closeVideo.addEventListener("click", () => {
 
+        lightboxVideo.pause();
 
-closeVideo.addEventListener("click",()=>{
+        lightboxVideo.src = "";
 
-    lightbox.classList.remove("active");
+        lightbox.classList.remove("active");
 
-    lightboxVideo.pause();
+    });
 
-    lightboxVideo.src="";
+    lightbox.addEventListener("click", (e) => {
 
-});
+        if (e.target === lightbox) {
+
+            lightboxVideo.pause();
+
+            lightboxVideo.src = "";
+
+            lightbox.classList.remove("active");
+
+        }
+
+    });
+
+}
