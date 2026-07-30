@@ -1,0 +1,290 @@
+```html
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Batu Cengiz | CRUSH</title>
+
+    <link rel="stylesheet" href="batu-cengiz.css">
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+
+        <a href="index.html">
+            <img src="images/logo.jpg" alt="CRUSH Logo">
+        </a>
+
+    </div>
+
+
+    <ul class="nav-links">
+
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="#gallery">Galeri</a></li>
+        <li><a href="#about">Hakkında</a></li>
+
+    </ul>
+
+</nav>
+
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-overlay">
+
+        <h1>BATU CENGİZ</h1>
+
+        <p>Crush grubu üyesi</p>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <h2>HAKKINDA</h2>
+
+    <p>
+
+12 Haziran 2001’de doğan Batu Cengiz, 5 yıldır dans ediyor ve son 2 yıldır profesyonel olarak dans kariyerini sürdürüyor. Çakal, Edis ve Manifest gibi sanatçıların sahne performanslarında arka dansçı olarak yer aldı. Idol House auditionlarında dansta Upper Intermediate, vokalde ise Beginner sınıfına seçildi. Bir ay sonra yapılan assessmentta dansta Advance seviyesine yükseldi. 5 Temmuz 2026’da gerçekleşen finalde gruba 5. sıradan seçilerek CRUSH’ın üyelerinden biri oldu.
+    </p>
+
+</section>
+
+
+
+
+<!-- PERFORMANSLAR -->
+
+<section class="performances">
+
+    <h2>PERFORMANSLAR</h2>
+
+    <div class="performance-grid">
+
+        <div class="performance-card" data-video="images/efe-performans/4.mp4">
+            <div class="performance-thumb">
+                <img src="images/efe-performans/4.jpg" alt="Performans 1">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>Çakkıdı</h3>
+        </div>
+
+        <div class="performance-card" data-video="images/efe-performans/6.mp4">
+            <div class="performance-thumb">
+                <img src="images/mirac-performans/3.jpg" alt="Performans 2">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>Dudak (Final)</h3>
+        </div>
+
+        <div class="performance-card" data-video="images/efe-performans/1.mp4">
+            <div class="performance-thumb">
+                <img src="images/efe-performans/1.jpg" alt="Performans 3">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>Dracula</h3>
+        </div>
+
+        <div class="performance-card" data-video="images/mirac-performans/2.mp4">
+            <div class="performance-thumb">
+                <img src="images/mirac-performans/2.jpg" alt="Performans 4">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>Dracula (Final)</h3>
+        </div>
+
+        <div class="performance-card" data-video="images/batu-performans/1.mp4">
+            <div class="performance-thumb">
+                <img src="images/batu-performans/1.jpg" alt="Performans 5">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>FE!N</h3>
+        </div>
+
+        <div class="performance-card" data-video="images/arda-performans/4.mp4">
+            <div class="performance-thumb">
+                <img src="images/arda-performans/4.jpg" alt="Final Performansı">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>Assesment 2</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PERFORMANCE VIDEO POPUP -->
+
+<div class="video-popup">
+
+    <button class="popup-close">×</button>
+
+    <div class="popup-video-wrapper">
+
+        <video class="popup-video" playsinline></video>
+
+        <button class="popup-play-btn">▶</button>
+
+    </div>
+
+</div>
+
+
+<!-- GALERİ -->
+
+<section class="gallery" id="gallery">
+
+
+<h2>FOTOĞRAFLAR&VİDEOLAR</h2>
+
+
+<div class="slider">
+
+
+    <button class="prev">&#10094;</button>
+
+
+    <div class="slides">
+
+
+        <img src="images/batu-cengiz/1.jpg" class="active" alt="Arda Soydoğan 1">
+
+        <img src="images/batu-cengiz/2.jpg" alt="Arda Soydoğan 2">
+
+        <img src="images/batu-cengiz/3.jpg" alt="Arda Soydoğan 3">
+
+        <img src="images/batu-cengiz/4.jpg" alt="Arda Soydoğan 4">
+
+
+        <video id="ardaVideo" controls loop>
+
+            <source src="images/batu-cengiz/1.mp4" type="video/mp4">
+
+        </video>
+
+        <img src="images/batu-cengiz/6.jpg" alt="Arda Soydoğan 5">
+
+
+        <video id="ardaVideo2" controls loop>
+
+            <source src="images/batu-cengiz/2.mp4" type="video/mp4">
+
+        </video>
+
+    </div>
+
+
+    <button class="next">&#10095;</button>
+
+
+</div>
+
+
+
+
+<div class="dots">
+
+    <span class="dot active-dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+
+</div>
+
+
+
+
+<div class="counter" id="counter">
+    1 / 7
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- SOSYAL MEDYA -->
+
+<section class="social">
+
+    <h2>SOSYAL MEDYA</h2>
+
+    <div class="social-buttons">
+
+        <a href="https://www.instagram.com/batuusann?igsh=MWViY2Z5MjNoaDdjcA==" target="_blank">Instagram</a>
+
+        <a href="https://www.tiktok.com/@batu.sann?_r=1&_t=ZS-98Ri6uKR64O" target="_blank">TikTok</a>
+
+        <a href="https://x.com/batusan05" target="_blank">X (Twitter)</a>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+<footer>
+
+<p>© 2026 CRUSH Fan Arşivi</p>
+
+</footer>
+
+
+
+
+
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox">
+
+    <span class="close">&times;</span>
+
+    <img id="lightbox-img" alt="">
+
+</div>
+
+
+
+
+
+
+<script src="batu-cengiz.js"></script>
+
+</body>
+
+</html>
+```

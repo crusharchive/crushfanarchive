@@ -1,0 +1,286 @@
+```html
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Miraç Fırat | CRUSH</title>
+
+    <link rel="stylesheet" href="mirac-firat.css">
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+
+        <a href="index.html">
+            <img src="images/logo.jpg" alt="CRUSH Logo">
+        </a>
+
+    </div>
+
+
+    <ul class="nav-links">
+
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="#gallery">Galeri</a></li>
+        <li><a href="#about">Hakkında</a></li>
+
+    </ul>
+
+</nav>
+
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-overlay">
+
+        <h1>MİRAÇ FIRAT
+
+        <p>Crush grubu üyesi</p>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <h2>HAKKINDA</h2>
+
+    <p>
+
+11 Nisan 2004’te İstanbul’da doğan Miraç Fırat, küçük yaşlarda K-Pop ile tanışarak sahnede olma hayali kurmaya başladı. Bu hayalinin peşinden giderek Kore’ye taşındı. Idol House’a katılmadan önce Kyungpook National University’de Sahne Sanatları eğitimi alıyordu. Yarışmanın başında yapılan auditionlarda vokalde Intermediate, dansta ise en yüksek seviye olan Upper Intermediate sınıfına seçildi. Finalde gruba 3. sıradan seçilerek CRUSH’ın üyelerinden biri oldu.
+    </p>
+
+</section>
+
+
+
+
+<!-- PERFORMANSLAR -->
+
+<section class="performances">
+
+    <h2>PERFORMANSLAR</h2>
+
+    <div class="performance-grid">
+
+        <div class="performance-card" data-video="images/mirac-performans/1.mp4">
+            <div class="performance-thumb">
+                <img src="images/mirac-performans/1.jpg" alt="Performans 1">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>FE!n (Final)</h3>
+        </div>
+
+        <div class="performance-card" data-video="images/mirac-performans/2.mp4">
+            <div class="performance-thumb">
+                <img src="images/mirac-performans/2.jpg" alt="Performans 2">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>Dracula (Final)</h3>
+        </div>
+
+        <div class="performance-card" data-video="images/arda-performans/4.mp4">
+            <div class="performance-thumb">
+                <img src="images/arda-performans/4.jpg" alt="Performans 3">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>Assesment 2</h3>
+        </div>
+
+        <div class="performance-card" data-video="images/mirac-performans/5.mp4">
+            <div class="performance-thumb">
+                <img src="images/mirac-performans/5.jpg" alt="Performans 4">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>Öyle Bir Geçer Zaman Ki</h3>
+        </div>
+
+        <div class="performance-card" data-video="images/mirac-performans/4.mp4">
+            <div class="performance-thumb">
+                <img src="images/mirac-performans/4.jpg" alt="Performans 4">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>Çakkıdı</h3>
+        </div>
+
+        <div class="performance-card" data-video="images/mirac-performans/6.mp4">
+            <div class="performance-thumb">
+                <img src="images/mirac-performans/6.jpg" alt="Final Performansı">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>Şımarık</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PERFORMANCE VIDEO POPUP -->
+
+<div class="video-popup">
+
+    <button class="popup-close">×</button>
+
+    <div class="popup-video-wrapper">
+
+        <video class="popup-video" playsinline></video>
+
+        <button class="popup-play-btn">▶</button>
+
+    </div>
+
+</div>
+
+
+<!-- GALERİ -->
+
+<section class="gallery" id="gallery">
+
+
+<h2>FOTOĞRAFLAR&VİDEOLAR</h2>
+
+
+<div class="slider">
+
+
+    <button class="prev">&#10094;</button>
+
+
+    <div class="slides">
+
+
+        <img src="images/mirac-firat/1.jpg" class="active" alt="Maç Firırat 1">
+
+        <img src="images/mirac-firat/2.jpg" class="active" alt="Miraç Fırat 2">
+        <img src="images/mirac-firat/3.jpg" class="active" alt="Miraç Fırat 3">
+
+        <img src="images/mirac-firat/4.jpg" class="active" alt="Miraç Fırat 4">
+
+
+       <video id="miracVideo2" controls loop>
+    <source src="images/mirac-firat/1.mp4" type="video/mp4">
+</video>
+
+<img src="images/mirac-firat/5.jpg" alt="Miraç Fırat 5">
+
+
+        <video id="oziVideo2" controls loop>
+
+            <source src="images/mirac-firat/2.mp4" type="video/mp4">
+
+        </video>
+
+    </div>
+
+
+    <button class="next">&#10095;</button>
+
+
+</div>
+
+
+
+
+<div class="dots">
+
+    <span class="dot active-dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+
+</div>
+
+
+
+<div class="counter" id="counter">
+    1 / 7
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- SOSYAL MEDYA -->
+
+<section class="social">
+
+    <h2>SOSYAL MEDYA</h2>
+
+    <div class="social-buttons">
+
+        <a href="https://www.instagram.com/miracfirat_?igsh=ZjJ0bTRqNGpscDdz" target="_blank">Instagram</a>
+
+        <a href="https://www.tiktok.com/@miracfirat_?_r=1&_t=ZS-98RUMe1Oktt" target="_blank">TikTok</a>
+
+        <a href="https://x.com/miracfirat_" target="_blank">X (Twitter)</a>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+<footer>
+
+<p>© 2026 CRUSH Fan Arşivi</p>
+
+</footer>
+
+
+
+
+
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox">
+
+    <span class="close">&times;</span>
+
+    <img id="lightbox-img" alt="">
+
+</div>
+
+
+
+
+
+
+<script src="mirac-firat.js"></script>
+
+</body>
+
+</html>
+```

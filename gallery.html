@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Galeri | CRUSH</title>
+
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="CRUSH Logo">
+        </a>
+
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">Ana Sayfa</a>
+            </li>
+
+            <li>
+                <a href="gallery.html">Galeri</a>
+            </li>
+        </ul>
+
+    </nav>
+
+
+    <!-- GALLERY -->
+    <section class="full-gallery">
+
+        <!-- 4:5 FOTOĞRAFLAR -->
+
+        <h2 class="gallery-title">FOTOĞRAFLAR</h2>
+        <div class="gallery-section gallery-portrait">
+
+            <img src="images/gallery/1.jpg" alt="CRUSH 1">
+            <img src="images/gallery/2.jpg" alt="CRUSH 2">
+            <img src="images/gallery/3.jpg" alt="CRUSH 3">
+            <img src="images/gallery/4.jpg" alt="CRUSH 4">
+
+        </div>
+
+
+        <!-- 1:1 FOTOĞRAFLAR -->
+
+        <h2 class="gallery-title">KONSEPT FOTOĞRAFLARI</h2>
+        <div class="gallery-section gallery-square">
+
+            <img src="images/gallery/7.jpg" alt="CRUSH 7">
+            <img src="images/gallery/8.jpg" alt="CRUSH 8">
+            <img src="images/gallery/9.jpg" alt="CRUSH 9">
+            <img src="images/gallery/10.jpg" alt="CRUSH 10">
+            <img src="images/gallery/11.jpg" alt="CRUSH 11">
+            <img src="images/gallery/12.jpg" alt="CRUSH 12">
+            <img src="images/gallery/13.jpg" alt="CRUSH 13">
+
+        </div>
+
+<!-- VİDEOLAR -->
+
+<h2 class="gallery-title">VİDEOLAR</h2>
+
+<div class="gallery-videos">
+
+<div class="gallery-videos">
+
+    <!-- 5.mp4 — 16:9 -->
+    <div class="gallery-video-box video-16-9">
+
+        <video class="gallery-video" playsinline preload="metadata">
+            <source src="images/gallery/5.mp4" type="video/mp4">
+        </video>
+
+        <button class="gallery-play-btn" aria-label="Videoyu oynat">
+            ▶
+        </button>
+
+    </div>
+
+
+    <!-- 6.mp4 — 4:5 -->
+    <div class="gallery-video-box video-4-5">
+
+        <video class="gallery-video" playsinline preload="metadata">
+            <source src="images/gallery/6.mp4" type="video/mp4">
+        </video>
+
+        <button class="gallery-play-btn" aria-label="Videoyu oynat">
+            ▶
+        </button>
+
+    </div>
+
+
+    <!-- 14.mp4 — 16:9 -->
+    <div class="gallery-video-box video-16-9">
+
+        <video class="gallery-video" playsinline preload="metadata">
+            <source src="images/gallery/14.mp4" type="video/mp4">
+        </video>
+
+        <button class="gallery-play-btn" aria-label="Videoyu oynat">
+            ▶
+        </button>
+
+    </div>
+
+</div>
+
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 CRUSH Fan Arşivi</p>
+    </footer>
+
+
+<script>
+document.querySelectorAll(".gallery-video-box").forEach(box => {
+
+    const video = box.querySelector(".gallery-video");
+    const button = box.querySelector(".gallery-play-btn");
+
+    function toggleVideo(){
+
+        if(video.paused){
+
+            video.play();
+            box.classList.add("playing");
+
+        }else{
+
+            video.pause();
+            box.classList.remove("playing");
+
+        }
+
+    }
+
+    button.addEventListener("click", function(e){
+        e.stopPropagation();
+        toggleVideo();
+    });
+
+    video.addEventListener("click", toggleVideo);
+
+    video.addEventListener("pause", function(){
+        box.classList.remove("playing");
+    });
+
+    video.addEventListener("play", function(){
+        box.classList.add("playing");
+    });
+
+    video.addEventListener("ended", function(){
+        box.classList.remove("playing");
+    });
+
+});
+
+
+/* SPACE TUŞU */
+
+document.addEventListener("keydown", function(e){
+
+    if(e.code !== "Space") return;
+
+    const active = document.activeElement;
+
+    if(
+        active &&
+        (
+            active.tagName === "INPUT" ||
+            active.tagName === "TEXTAREA" ||
+            active.tagName === "BUTTON"
+        )
+    ) return;
+
+    const videos = document.querySelectorAll(".gallery-video");
+
+    if(videos.length === 0) return;
+
+    e.preventDefault();
+
+    let playingVideo = [...videos].find(video => !video.paused);
+
+    if(playingVideo){
+
+        playingVideo.pause();
+
+    }else{
+
+        videos[0].play();
+
+    }
+
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,285 @@
+```html
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Milan Önder | CRUSH</title>
+
+    <link rel="stylesheet" href="milan-onder.css">
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+
+        <a href="index.html">
+            <img src="images/logo.jpg" alt="CRUSH Logo">
+        </a>
+
+    </div>
+
+
+    <ul class="nav-links">
+
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="#gallery">Galeri</a></li>
+        <li><a href="#about">Hakkında</a></li>
+
+    </ul>
+
+</nav>
+
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-overlay">
+
+        <h1>MİLAN ÖNDER
+
+        <p>Crush grubu üyesi</p>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <h2>HAKKINDA</h2>
+
+    <p>
+
+2004 Rusya doğumlu olan Milan Önder, Idol House yarışmasına son 20 stajyerden biri olarak yarışma boyunca eğitim ve performans sürecinde yer alan yarışmacılardan biri oldu. Yarışma sürecinde özellikle sahne duruşu ve görsel konseptiyle öne çıkan Milan, aynı zamanda rap ve performans tarafında da dikkat çekti. Yarışmanın büyük finalindeki performansı ile CRUSH grubuna 7. sıradan girdi. Kendi yazıp seslendirdiği şarkısı 'Vahşi Batı', Spotify'da 3 milyon dinlenmeye ulaştı.    </p>
+
+</section>
+
+
+
+
+<!-- PERFORMANSLAR -->
+
+<section class="performances">
+
+    <h2>PERFORMANSLAR</h2>
+
+    <div class="performance-grid">
+
+        <div class="performance-card" data-video="images/milan-performans/1.mp4">
+            <div class="performance-thumb">
+                <img src="images/milan-performans/1.jpg" alt="Performans 1">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>Killin' It Girl (Final)</h3>
+        </div>
+
+        <div class="performance-card" data-video="images/efe-performans/5.mp4">
+            <div class="performance-thumb">
+                <img src="images/efe-performans/5.jpg" alt="Performans 2">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>FE!N</h3>
+        </div>
+
+        <div class="performance-card" data-video="images/milan-performans/2.mp4">
+            <div class="performance-thumb">
+                <img src="images/milan-performans/2.jpg" alt="Performans 3">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>Çakkıdı (Final)</h3>
+        </div>
+
+        <div class="performance-card" data-video="images/milan-performans/3.mp4">
+            <div class="performance-thumb">
+                <img src="images/milan-performans/3.jpg" alt="Performans 4">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>Benim Ol</h3>
+        </div>
+
+        <div class="performance-card" data-video="images/milan-performans/4.mp4">
+            <div class="performance-thumb">
+                <img src="images/milan-performans/4.jpg" alt="Performans 4">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>FE!N (Final)</h3>
+        </div>
+
+        <div class="performance-card" data-video="images/milan-performans/5.mp4">
+            <div class="performance-thumb">
+                <img src="images/milan-performans/5.jpg" alt="Final Performansı">
+                <div class="play-btn">▶</div>
+            </div>
+            <h3>Şımarık</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PERFORMANCE VIDEO POPUP -->
+
+<div class="video-popup">
+
+    <button class="popup-close">×</button>
+
+    <div class="popup-video-wrapper">
+
+        <video class="popup-video" playsinline></video>
+
+        <button class="popup-play-btn">▶</button>
+
+    </div>
+
+</div>
+
+
+<!-- GALERİ -->
+
+<section class="gallery" id="gallery">
+
+
+<h2>FOTOĞRAFLAR&VİDEOLAR</h2>
+
+
+<div class="slider">
+
+
+    <button class="prev">&#10094;</button>
+
+
+    <div class="slides">
+
+
+        <img src="images/milan-onder/1.jpg" class="active" alt="Maç Fırat 1">
+
+        <img src="images/milan-onder/2.jpg" class="active" alt="Milan Önder 2">
+        <img src="images/milan-onder/3.jpg" class="active" alt="Milan Önder 3">
+
+        <img src="images/milan-onder/4.jpg" class="active" alt="Milan Önder 4">
+
+
+       <video id="milanVideo2" controls loop>
+    <source src="images/milan-onder/1.mp4" type="video/mp4">
+</video>
+
+<img src="images/milan-onder/5.jpg" alt="Milan Önder 5">
+
+
+        <video id="milanVideo2" controls loop>
+
+            <source src="images/milan-onder/2.mp4" type="video/mp4">
+
+        </video>
+
+    </div>
+
+
+    <button class="next">&#10095;</button>
+
+
+</div>
+
+
+
+
+<div class="dots">
+
+    <span class="dot active-dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+
+</div>
+
+
+
+<div class="counter" id="counter">
+    1 / 7
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- SOSYAL MEDYA -->
+
+<section class="social">
+
+    <h2>SOSYAL MEDYA</h2>
+
+    <div class="social-buttons">
+
+        <a href="https://www.instagram.com/milanonderr?igsh=aXVoMzRteDV1bTF5" target="_blank">Instagram</a>
+
+        <a href="https://www.tiktok.com/@milanonder?_r=1&_t=ZS-98RsMhypbc1" target="_blank">TikTok</a>
+
+        <a href="https://x.com/milan_onde32094" target="_blank">X (Twitter)</a>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+<footer>
+
+<p>© 2026 CRUSH Fan Arşivi</p>
+
+</footer>
+
+
+
+
+
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox">
+
+    <span class="close">&times;</span>
+
+    <img id="lightbox-img" alt="">
+
+</div>
+
+
+
+
+
+
+<script src="milan-onder.js"></script>
+
+</body>
+
+</html>
+```
