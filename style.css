@@ -1050,3 +1050,26 @@ nav{
     }
 
 }
+
+
+@media(max-width:768px){
+
+    .home-gallery-prev,
+    .home-gallery-next{
+
+        width:35px;
+        height:35px;
+
+        font-size:20px;
+
+    }
+
+
+    .home-gallery-slider{
+
+        gap:10px;
+        flex-wrap:nowrap;
+
+    }
+
+}
