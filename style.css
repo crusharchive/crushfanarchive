@@ -146,84 +146,6 @@ nav{
     }
 }
 
-/* CRUSH COUNTDOWN */
-
-.countdown-box{
-    margin-top:40px;
-    margin-bottom:100px;
-    text-align:center;
-}
-
-
-.countdown-box h2{
-
-    font-size:45px;
-    letter-spacing:8px;
-
-    margin-bottom:25px;
-
-}
-
-
-
-#countdown{
-
-    display:flex;
-    justify-content:center;
-    gap:25px;
-
-}
-
-
-#countdown span{
-
-    display:flex;
-    flex-direction:column;
-
-    background:rgba(255,255,255,.08);
-
-    border:1px solid rgba(255,255,255,.15);
-
-    padding:18px 25px;
-
-    border-radius:15px;
-
-    min-width:100px;
-
-    backdrop-filter:blur(10px);
-
-}
-
-
-
-#countdown b{
-
-    font-size:35px;
-
-}
-
-
-
-@media(max-width:600px){
-
-    #countdown{
-
-        gap:10px;
-        flex-wrap:wrap;
-
-    }
-
-
-    #countdown span{
-
-        min-width:80px;
-        padding:15px;
-
-    }
-
-
-}
-
 /* DROPDOWN */
 
 .dropdown{
@@ -286,7 +208,7 @@ nav{
         url("./images/hero.jpeg");
 
     background-size:cover;
- background-position: center 38%;
+ background-position: center 75%;
     background-repeat:no-repeat;
 }
 
